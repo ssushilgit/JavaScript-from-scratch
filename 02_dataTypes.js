@@ -12,6 +12,9 @@ let city //undefined
 
 console.log(typeof(age))
 
+console.log(typeof null)  // object
+console.log(typeof undefined) //undefined
+
 // JavaScript has several primitive data types:
 
 // String: Defined using single or double quotes. Example: let name = "John"; 
@@ -20,6 +23,3 @@ console.log(typeof(age))
 // Null: A special type representing an intentional absence of any value. Null is a stand-alone value
 // Undefined: Indicates a variable that has been declared but not assigned a value 
 // Symbol: A unique and immutable primitive value often used to identify object properties 
-
-console.log(typeof null)  // object
-console.log(typeof undefined) //undefined
