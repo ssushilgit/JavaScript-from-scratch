@@ -59,12 +59,34 @@ const users = [
     }
 ]
 
-console.log(users[1].email)
+// console.log(users[1].email)
 
-console.log(tinderUser)
-console.log(Object.keys(tinderUser)) // displays the keys in the tinderUser object
-console.log(Object.values(tinderUser)) // displays the values in the tinderUser object
-console.log(Object.entries(tinderUser)) // displays both keys and values in the tinderUser object
+// console.log(tinderUser)
+// console.log(Object.keys(tinderUser)) // displays the keys in the tinderUser object
+// console.log(Object.values(tinderUser)) // displays the values in the tinderUser object
+// console.log(Object.entries(tinderUser)) // displays both keys and values in the tinderUser object
+
+// console.log(tinderUser.hasOwnProperty('id')) // hasOwnProperty method
 
 
-console.log(tinderUser.hasOwnProperty('id')) // hasOwnProperty method
+
+const course = {
+    courseName : "JavaScript",
+    courseFee : "999",
+    courseInstructor : "Hitesh Chaudhary"
+}
+
+// console.log(course.courseFee)
+
+// const {courseFee} = course 
+// console.log(courseFee)
+const {courseFee : fee} = course 
+console.log(fee)
+
+// JSON format example
+
+// {
+//     "name":"John",
+//     "age":30,
+//     "car":null
+// }

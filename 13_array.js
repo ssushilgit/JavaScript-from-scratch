@@ -5,7 +5,6 @@ const myArray2 = new Array(1,2,3,4)
 // console.log(players[2])
 
 // Array methods
-
 myArray.push(6) // add an element at the end of the array
 myArray.pop() // removes an element from end of the array
 
@@ -23,11 +22,11 @@ const newArray = myArray.join()
 
 console.log("A", myArray)
 const myn1 = myArray.slice(1,3)
-console.log(myn1)
+console.log(myn1) // slice doesnot manipulate the original array
 
 console.log("B", myArray)
-const myn2 =myArray.splice(1,3)
+const myn2 =myArray.splice(1,3) // splice manipulate the original array
 
-console.log("C", myArray)
+console.log("C", myArray) // C [ 0, 4, 5 ] - after manipulation
 console.log(myn2)
 

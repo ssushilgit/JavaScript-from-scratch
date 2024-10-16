@@ -2,7 +2,6 @@
 
 //object literals
 const mySym = Symbol("key1")
-
 const JsUser = {
     name : "Sushil",
     "Full Name" : "Sushil Shrestha",
