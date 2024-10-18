@@ -12,20 +12,15 @@
 
  function one(){
     const username = "sushil"
-
     function two(){
         const website = "youtube"
         console.log(username)
     }
-
     // console.log(website)
-
     two()
  }
 
 //  one()
-
-
  if(true) {
     const firstname ="Sushil"
     if (firstname === "Sushil"){
