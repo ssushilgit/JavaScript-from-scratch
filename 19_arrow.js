@@ -14,7 +14,6 @@ const user = {
 
 // console.log(this) // {} - Logs global `this` (window in browsers, global in Node.js).
 
-
 // function one(){
 //     let username = "sam"
 //     console.log(this.username) // undefined
@@ -24,7 +23,6 @@ const user = {
 //     let username = "sam"
 //     console.log(this.username)
 // }
-
 
 const one = () =>{  // arrow function
     let username = "sam"
@@ -40,5 +38,7 @@ const one = () =>{  // arrow function
 // explicit return - no need to use return keyword and {}
 // const addTwo = (num1, num2) => num1 + num2
 const addTwo = (num1, num2) => (num1 + num2)
-
 console.log(addTwo(4,5))
+
+// for returning objects
+const name = () => ({username})
