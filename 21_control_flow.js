@@ -1,7 +1,7 @@
 // Various comparison operators -  <, >, <=, >=, ==, !=, ===
 // if
 const isUserLoggedIn = true
-// if(2 === "2"){
+// if(2 === "2"){ // === operator not only check the value but also check the typeof
 //      console.log("executed")
 // }
 // if(3 != "2"){
