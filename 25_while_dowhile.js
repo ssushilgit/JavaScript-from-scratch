@@ -21,8 +21,6 @@ do {
     score++
 } while (score<=10);
 
-
-
 let array = 0 
 do{
     console.log(`Games are ${myArray[array]}`)    
