@@ -1,17 +1,15 @@
-
-// const myTotal = myNums.reduce(function(accumulator, current_value){
-    //     console.log(`accumulator : ${accumulator} and current_value : ${current_value}`)
-    //     return accumulator + current_value
-    // }, 0) // 0 is accumulator value
-    
-    // accumulator : 0 and current_value : 1
-    // accumulator : 1 and current_value : 2
-    // accumulator : 3 and current_value : 3
-    // 6
-    
 // reduce
-    
 const myNums = [1,2,3]
+// const myTotal = myNums.reduce(function(accumulator, current_value){
+//     console.log(`accumulator : ${accumulator} and current_value : ${current_value}`)
+//     return accumulator + current_value
+// }, 0) // 0 is accumulator value
+
+// accumulator : 0 and current_value : 1
+// accumulator : 1 and current_value : 2
+// accumulator : 3 and current_value : 3
+// 6
+
 const myTotal = myNums.reduce((accumulator, current_value)=>{
     return accumulator + current_value
 }, 0)

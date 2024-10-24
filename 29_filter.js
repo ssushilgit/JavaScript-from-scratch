@@ -78,7 +78,7 @@ const books = [
         genre: 'Travel',
         publish: 2001,
         edition: 2017
-    }
+    } 
 ];
 
 // const userBooks = books.filter((bk)=>bk.genre ==='History')
