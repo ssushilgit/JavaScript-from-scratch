@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // promiseOne
+    const promiseOne = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            console.log('Async task is complete')  // promise complete is always finished first
+            resolve() // connect promiseOne and then
+        }, 1000);
+    })
+
+    promiseOne.then(function () {
+        console.log('Task completed')
+    })
+
+    // promiseTwo
+    new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            console.log('Async Task 2')
+            resolve()
+        }, 1000)
+    }).then(function () {
+        console.log('Async task 2 resolved')
+    })
+
+    // promiseThree
+    const promiseThree = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            resolve({
+                username: 'Sushil',
+                email: 'shresthasushil741@gmail.com'
+            })
+        }, 1000)
+    })
+    promiseThree.then(function (user) {
+        console.log(user)
+    })
+
+    // promiseFour
+    const promiseFour = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            // let error = false // - {username: 'Sugam', password: '123'}
+            let error = true  // - ERROR : Something went wrong
+            if (!error) {
+                resolve({
+                    username: 'Sugam',
+                    password: '123'
+                })
+            }
+            else {
+                reject('ERROR : Something went wrong')
+            }
+        }, 1000)
+    })
+    promiseFour
+        .then((user) => {
+            console.log(user)
+            return user.username
+        })
+        .then((username) => {
+            console.log(username)
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
+        .finally(() => {
+            console.log('The promise is either resolved or rejected')
+        })
+
+    // promiseFive
+    const promiseFive = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            // let error = false  // {course: 'JavaScript', fee: '999'}
+            let error = true
+            if (!error) {
+                resolve({
+                    course: 'JavaScript',
+                    fee: '999'
+                })
+            }
+            else {
+                reject('ERROR : JS went wrong ')
+            }
+        }, 1000)
+    });
+
+    async function consumePromiseFive() {
+        try {
+            const response = await promiseFive
+            console.log(response)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    consumePromiseFive()
+
+    // Another example
+    // async function getGithubUser() {
+    //     try {
+    //         const response = await fetch('https://api.github.com/users/ssushilgit')
+    //         const data = await response.json()
+    //         console.log(data)
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
+    // getGithubUser()
+
+    fetch('https://api.github.com/users/ssushilgit')
+    .then((response)=>{
+        return response.json()
+    })
+    .then((data)=>{
+        console.log(data)
+    })
+    .catch((error)=>{
+        console.log(error)
+    })
+
+</script>
+
+</html>
