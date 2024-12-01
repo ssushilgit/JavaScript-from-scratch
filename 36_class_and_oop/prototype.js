@@ -28,7 +28,7 @@
 // myHeros.heysushil()
 
 // Inheritance
-const User = {
+const User = { 
     name : "coffe",
     email: 'coffee@gmail.com'
 }
@@ -51,6 +51,8 @@ const TASupport = {
 
 // Modern syntax
 Object.setPrototypeOf(TeachingSupport, Teacher) //TeachingSupport can access all properties of Teacher
+
+
 
 let anotherUserName = "Sushil        "
 
