@@ -1,3 +1,5 @@
+// Class based get set
+
 class User{
     constructor(email, password){
         this.email = email

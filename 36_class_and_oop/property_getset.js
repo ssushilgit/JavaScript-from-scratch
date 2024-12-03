@@ -1,3 +1,5 @@
+// property based
+
 function User(email, password){
     this._email = email
     this._password = password
@@ -23,3 +25,5 @@ function User(email, password){
 const hello = new User("sushil@gmail.com", "abx")
 console.log(hello.email)
 console.log(hello.password)
+
+

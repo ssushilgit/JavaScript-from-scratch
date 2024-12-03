@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scoping</title>
+</head>
+
+<body>
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+
+</body>
+<!-- <script>
+    // Lexical Scoping
+    // function outer() {
+    //     let username = "sushil"
+    //     // console.log("Outer : ",secret)
+    //     function innerOne() {
+    //         let secret = "123abc"
+    //         console.log("Inner One : ", username)
+    //     }
+    //     function innerTwo() {
+    //         console.log("Inner Two : ", username)
+    //     }
+    //     innerOne()
+    //     innerTwo()
+    // }
+    // outer()
+    // console.log("Outer : ", username)
+
+    // Closure
+    function init() {
+        var name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        displayName();
+    }
+    init();
+
+</script> -->
+
+<script>
+    // document.getElementById('red').onclick = function(){
+    //     document.body.style.backgroundColor = 'red'
+    // }
+
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = 'green'
+    // }
+
+    function clickHandler(color) {
+        // document.body.style.backgroundColor = `${color}`
+        return function () {
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    document.getElementById('red').onclick = clickHandler('red')
+    document.getElementById('green').onclick = clickHandler('green')
+</script>
+
+</html>
